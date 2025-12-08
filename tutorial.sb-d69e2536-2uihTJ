@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<title>Vim Tutorial</title>
+</head>
+<body>
+<h2>The Basics of Vim</h2>
+<p>On this webpage I will go over the basics on how to use vim.<br>Here I will talk about how to open and close vim and how to save files. I will also create a list of useful commands that you can use in vim:</p>
+<h4>Opening/Closing vim</h4>
+<p>To open and close vim you will need to:</p>
+<ol>
+<li>Get to your desktop.
+ <ul>You can navigate your computer by using the "cd" command, so to get to your desktop just type in "cd Desktop" in your terminal.
+</ul>
+</li>
+<li>Next Get to your website
+<ul>Doing this is the same as getting to the desktop, just use "cd website".
+</ul>
+</li>
+<li>Now that you are in your website you can open vim.<br>To do this type vim and then your folders name.
+</ol>
+<p>Amazing! Now we are in vim.</p>
+<h4>Saving Files in vim</h4>
+<p>Saving files in vim is quick and easy.<br>To do it all you have to do is
+<ol>
+<li>Press the escape key on your computer</li>
+<li>Type :wq and press enter
+</ol>
+<p>Great! We are done here</p>
+<h4>Useful commands</h4>
+<ul>
+<li>
