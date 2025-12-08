@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Who wants ice cream??</title>
+        <script src="../js/validate.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Ice Cream Party Invite!</h1>
+                <br>
+            <form id="redirectForm" action="" method="get">
+        <label for="destination">Are you coming to the party?</label>
+        <select name="destination" id="destination">
+            <option value="yes.html">Yes!</option>
+            <option value="no.html">No (wrong answer)</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit to continue">
+    </form>
+
+    <script>
+        document.getElementById('redirectForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const selectElement = document.getElementById('destination');
+            const selectedPage = selectElement.value;
+
+            if (selectedPage) {
+                window.location.href = selectedPage; // Redirect to the selected page
+            }
+        });
+    </script>
+    </body>
+</html>

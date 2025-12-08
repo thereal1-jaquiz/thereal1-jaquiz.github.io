@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Who wants ice cream??</title>
+        <script src="../js/validate.js"></script>
+    </head>
+    <body>
+        <main>
+                        <h1>Ice Cream Party Invite!</h1>
+            <br>
+        <form action="https://httpbin.org/post" method="POST">
+            What is your name?
+            <input type="text" name="yourname" required>
+                <br>
+                <br>
+            What is your Email address?
+            <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+            What is your phone number?
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br>
+                <br>
+            How many people will you be bringing?
+            <input type="number" id="quantity" name="quantity" min="0" required>
+                <br>
+                <br>
+            What is your favorite type of ice cream?<br><br>
+            <input type="radio" id="Chocolate" name="fav_flavor" value="Chocolate">
+            <label for="Chocolate">Chocolate</label><br>
+            <input type="radio" id="Vanilla" name="fav_flavor" value="Vanilla">
+            <label for="Vanilla">Vanilla</label><br>
+            <input type="radio" id="Strawberry" name="fav_flavor" value="Strawberry">
+            <label for="Strawberry">Strawberry</label><br>
+            <input type="radio" id="Mint Chip" name="fav_flavor" value="Mint Chip">
+            <label for="Mint Chip">Mint Chip</label><br>
+            <input type="radio" id="Cookies n' Cream" name="fav_flavor" value="Cookies n' Cream">
+            <label for="Cookies n' Cream">Cookies n' Cream</label><br>
+            <input type="radio" name="option" value="other" id="otherOption">
+            <label for="otherOption">Other</label>
+            <input type="text" id="otherText" name="other_text" placeholder="Please specify your flavor">
+                <br>
+                <br>
+            What toppings do you like?<br><br>
+            <input type="checkbox" id="Sprinkles" name="toppings[]" value="sprinkles">
+            <label for="sprinkles">Sprinkles</label><br>
+            <input type="checkbox" id="whipped cream" name="toppings[]" value="whipped cream">
+            <label for="whipped cream">Whipped Cream</label><br>
+            <input type="checkbox" id="Chocolate Chips" name="toppings[]" value="chocolate chips">
+            <label for="chocolate chips">Chocolate Chips</label><br>
+            <input type="checkbox" id="Gummy Bears" name="toppings[]" value="gummy bears">
+            <label for="gummy bears">Gummy Bears</label><br>
+            <input type="checkbox" name="option" value="other" id="otherCheckbox">
+            <label for="otherCheckbox">Other</label>
+            <input type="text" id="otherText" name="other_text" placeholder="Please specify your topping">
+                <br>
+                <br>
+            What types of entertainment would you like to see at the party?
+            <select id="funSelect" name="entertainment">
+                <option value="Balloon Animals">Balloon Animals</option>
+                <option value="Bouncy House">Bouncy House</option>
+                <option value="Bean Bag Toss">Bean Bag Toss</option>
+                <option value="DJ">DJ</option>
+                <option value="Face Painting">Face Painting</option>
+                <option value="Magician">Magician</option>
+                <option value="Movie">Movie</option>
+                <option value="All of the Above">All of the Above</option>
+            </select>
+                <br>
+                <br>
+            What time can you arive? (party is from 6:30PM-9:30PM)
+            <input type="time" id="Event Time" name="eventTime" required>
+                <br>
+                <br>
+            Do you have any suggestions or comments?
+            <input type="text" name="suggestion">
+                <br>
+                <br>
+                    <button> Submit</button>
+               </form>
+               </main>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Who wants ice cream??</title>
+        <script src="../js/validate.js"></script>
+    </head>
+    <body>
+        <h1>Ice Cream Party Invite!</h1>
+            <br>
+            <form action="https://httpbin.org/post" method="POST">
+        <h3>You're not coming to my party? What! Why not?</h3><br>
+            <input type="radio" id="busy" name="reason" value="Busy">
+            <label for="busy">busy (lame excuse)</label><br>
+            <input type="radio" id="I HATE you" name="reason" value="I HATE you">
+            <label for="I HATE you">I HATE you (no you don't... im great!)</label><br>
+            <input type="radio" id="sleeping" name="reason" value="Sleeping">
+            <label for="sleeping">sleeping (valid)</label><br>
+            <input type="radio" id="partents wont let me" name="reason" value="parents wont let me">
+            <label for="parents wont let me">parents won't let me (why? it's an ice cream party)</label><br>
+            <input type="radio" id="im studying" name="reason" value="im studying">
+            <label for="im studying">im studying for Mr. Chris' reading quiz (Wow Great! That's exactly what you should be doing!)</label><br>
+            <input type="radio" name="option" value="other" id="otherOption">
+            <label for="otherOption">Other</label>
+            <input type="text" id="otherText" name="other_text" placeholder="Please specify why you can't come">
+                <br>
+                <br>
+                    <button> Submit</button>
+               </form>
+               </main>
+            
