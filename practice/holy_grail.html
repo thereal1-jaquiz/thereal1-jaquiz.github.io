@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Holy Grail Layout Practice</title>
+        <style>
+            .grid {
+                display: grid;
+                height: 100vh;
+                grid:
+                'head head' 100px
+                'menu main' 1fr
+                'foot foot' 200px
+                /200px 1fr;
+            }
+            #header{
+                grid-area: head;
+                background-color: papayawhip;
+                border: 2px solid black;
+                text-align: center;
+                font-size: 24px;
+                color: darkblue
+            }
+            #menu{
+                grid-area: menu;
+                background-color: papayawhip;
+                border: 2px solid black;
+                text-align: center;
+                font-size: 24px;
+                color: darkblue
+            }
+            #main{
+                grid-area: main;
+                background-color: papayawhip;
+                border: 2px solid black;
+                text-align: center;
+                font-size: 24px;
+                color: darkblue
+            }
+            #footer{
+                grid-area: foot;
+                background-color: papayawhip;
+                border: 2px solid black;
+                text-align: center;
+                font-size: 24px;
+                color: darkblue
+            }
+
+            </style>
+        </head>
+    <body>
+        <div class="grid">
+            <div id="header">Header</div>
+            <div id="menu">Menu</div>
+            <div id="main">Main Content</div>
+            <div id="footer">Footer</div>
+        </div>
+    </body>
+</html>
