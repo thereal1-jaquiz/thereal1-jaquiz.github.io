@@ -1,0 +1,234 @@
+ <html>
+    <head>
+        <style>
+            body{
+                background: linear-gradient(135deg, #1a2980, #26d0ce);
+                height: 100vh;
+            }
+            h1{
+                text-align: center;
+                font-family: Tahoma, sans-serif;
+                color: white;
+            }
+            .container {
+              display: grid;
+              width: 80vw;
+              height: 80vh;
+              margin: auto;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+              background-color: Thistle;
+              padding: 10px;
+              border-radius: 20px;
+              border: 8px solid red;
+            }
+            .heart {
+              height: 20vh; /* adjust to control the size */
+              aspect-ratio: 1;
+              --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+              -webkit-mask-box-image: var(--_m);
+                         mask-border: var(--_m);
+              clip-path: polygon(-41% 0,50% 91%, 141% 0);
+              background-color: chocolate;
+              margin: auto;
+            }
+            /* fallback until better support for mask-border */
+            @supports not (-webkit-mask-box-image: var(--_m)) { 
+              .heart {
+                mask:
+                 radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+                 radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+                 conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+              }
+              /* HTML: <div class="squircle"></div> */
+.squircle {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 30%;
+  corner-shape: squircle;
+  background: #8458ff;
+}
+            }
+            #chocolateheart{
+                grid-column-start: 2;
+                grid-row-start:1;
+            }
+            #chocolateheart2{
+                grid-column-start: 3;
+                grid-row-start:1;
+            }#chocolateheart3{
+                grid-column-start: 3;
+                grid-row-start:-1;
+            }
+            .lilbits{
+                grid-column-start: 1;
+                grid-row-start: 1;
+                display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+            }
+            #mnm{
+                grid-column-start:1;
+                grid-row-start:1;
+                width:9vh;
+                height:9vh;
+                background-color:red;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #mnm2{
+                grid-column-start:2;
+                grid-row-start:1;
+                width:9vh;
+                height:9vh;
+                background-color:yellow;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #mnm3{
+                grid-column-start:3;
+                grid-row-start:1;
+                width:9vh;
+                height:9vh;
+                background-color:rgb(0, 119, 255);
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #mnm4{
+                grid-column-start:1;
+                grid-row-start:2;
+                width:9vh;
+                height:9vh;
+                background-color:forestgreen;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #mnm5{
+                grid-column-start:2;
+                grid-row-start:2;
+                width:9vh;
+                height:9vh;
+                background-color:rgb(255, 106, 0);
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #mnm6{
+                grid-column-start:3;
+                grid-row-start:2;
+                width:9vh;
+                height:9vh;
+                background-color:rgb(54, 26, 12);
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #pbcup{
+                grid-column-start: 4;
+                grid-row-start:4;
+                background-color:#551e0a;
+                display: grid
+            }
+            #pbcup2{
+                grid-column-start: 4;
+                grid-row-start:5;
+                background-color:#551e0a;
+                display: grid
+            }
+            #pbcup3{
+                grid-column-start: 5;
+                grid-row-start:4;
+                background-color:#551e0a;
+                display: grid
+            }
+            #pbcup4{
+                grid-column-start: 5;
+                grid-row-start:5;
+                background-color:#551e0a;
+                display: grid
+            }
+            #chocobar1{
+                grid-column: 1/4;
+                grid-row: 3 / 6;
+                background-color:#a60a0a;
+                display: grid
+            }
+            #littlechocolate1{
+                grid-column: 5 / 6;
+                grid-row: 1 / 2;
+                background-color:#a60a0a;
+                display: grid
+            }
+            .flower {
+  width: 220px; /* adjust to control the size */
+  aspect-ratio: 1;
+  --g:/5.908% 5.908% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+  mask: radial-gradient(100% 100%,#000 calc(46.953% - 1px),#0000 46.953%) subtract,100% 50% var(--g),99.606% 56.267% var(--g),98.429% 62.434% var(--g),96.489% 68.406% var(--g),93.815% 74.088% var(--g),90.451% 79.389% var(--g),86.448% 84.227% var(--g),81.871% 88.526% var(--g),76.791% 92.216% var(--g),71.289% 95.241% var(--g),65.451% 97.553% var(--g),59.369% 99.114% var(--g),53.14% 99.901% var(--g),46.86% 99.901% var(--g),40.631% 99.114% var(--g),34.549% 97.553% var(--g),28.711% 95.241% var(--g),23.209% 92.216% var(--g),18.129% 88.526% var(--g),13.552% 84.227% var(--g),9.549% 79.389% var(--g),6.185% 74.088% var(--g),3.511% 68.406% var(--g),1.571% 62.434% var(--g),0.394% 56.267% var(--g),0% 50% var(--g),0.394% 43.733% var(--g),1.571% 37.566% var(--g),3.511% 31.594% var(--g),6.185% 25.912% var(--g),9.549% 20.611% var(--g),13.552% 15.773% var(--g),18.129% 11.474% var(--g),23.209% 7.784% var(--g),28.711% 4.759% var(--g),34.549% 2.447% var(--g),40.631% 0.886% var(--g),46.86% 0.099% var(--g),53.14% 0.099% var(--g),59.369% 0.886% var(--g),65.451% 2.447% var(--g),71.289% 4.759% var(--g),76.791% 7.784% var(--g),81.871% 11.474% var(--g),86.448% 15.773% var(--g),90.451% 20.611% var(--g),93.815% 25.912% var(--g),96.489% 31.594% var(--g),98.429% 37.566% var(--g),99.606% 43.733% var(--g);
+}
+.box {
+  mask: repeating-conic-gradient(from 147.5deg at 50% 10px,#0000 0,#000 1deg 64deg,#0000 65deg 180deg) 50% -10px/12.74px
+}
+        </style>
+    </head>
+    <body>
+        <h1>Here, I got you some chocolates &lt;3</h1>
+        <div class="container">
+            <div class="heart" id="chocolateheart"></div>
+            <div class="heart" id="chocolateheart2"></div>
+            <div class="heart" id="chocolateheart3"></div>
+
+            <div class="lilbits">
+                <div id="mnm">
+                m
+                </div>
+                <div id="mnm2">
+                m
+                </div>
+                <div id="mnm3">
+                m
+                </div>
+                <div id="mnm4">
+                m
+                </div>
+                <div id="mnm5">
+                m
+                </div>
+                <div id="mnm6">
+                m
+                </div>
+                 <div id="pbcup" class="flower">
+                </div>
+                <div id="pbcup2" class="flower">
+                </div>
+                <div id="pbcup3" class="flower">
+                </div>
+                <div id="pbcup4" class="flower">
+                </div>
+                <div id="chocobar1" class="box">
+                </div>
+                <div id="littlechocolate1" class="squircle">
+                </div>
+                <!-- TODO: Add some more divs here, and style them
+                    to fill in the 'lilbits' part of the chocolate box -->
+            </div>
+            <!-- TODO: Add some more divs here, and style them
+                to fill in the other sections of the chocolate box -->
+        </div>
+    </body>
+</html> 
