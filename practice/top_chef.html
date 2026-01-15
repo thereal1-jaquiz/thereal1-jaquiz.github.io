@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <head>
+        <title>Ethan's Dumb Dinosaurs</title>
+        <style>
+            body{
+                background-color:papayawhip;
+            }
+             body {
+    font-family: 'Nunito', sans-serif;
+}
+            .grid {
+                display: grid;
+                height: 100vh;
+                grid:
+                'header header header header header header' 100px
+                'menu exibits tickets contact about search' 100px
+                'left main main main main right' 1fr
+                'foot foot foot foot foot foot' 150px
+                /100px 150px 1fr 1fr 1fr 400px;
+            }
+            #menu{
+                grid-area: menu;
+                background-color: lightgray;
+                text-align: center;
+                font-size: 24px;
+                color: darkblue
+            }
+            #exibits{
+                grid-area: exibits;
+                background-color: lightgrey;
+                text-align: middle;
+                font-size: 24px;
+                color: #282A2B
+            }
+            #tickets{
+                grid-area: tickets;
+                background-color: lightgrey;
+            }
+            #contact{
+                grid-area: contact;
+                background-color: lightgrey;
+            }
+            #about{
+                grid-area: about;
+                background-color: lightgrey;
+            }
+            #search{
+                grid-area: search;
+                background-color: lightgrey;
+            }
+            #left{
+                grid-area: left;
+            }
+            #main{
+                grid-area: main;
+            }
+            #right{
+                grid-area: right;
+            }
+            #foot{
+                grid-area: foot;
+            }
+            #header{
+                grid-area: header;
+                background-color: whitesmoke;
+            }
+        </style>
+    </head>
+<body>
+    <div class="grid">
+            <div id="header">LOGO</div>
+            <div id="menu"></div>
+            <div id="logo">Logo</div>
+            <div id="exibits">Exibits</div>
+            <div id="tickets">Tickets</div>
+            <div id="contact">Contact</div>
+            <div id="about">About</div>
+            <div id="search">Search</div>
+            <div id="left"></div>
+            <div id="main"></div>
+            <div id="right"></div>
+            <div id="foot"></div>
+        </div>
+    </body>
+</html>

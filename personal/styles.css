@@ -1,3 +1,60 @@
+.my-button {
+    background-color: #4c90af; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.my-button:hover {
+    background-color: #4886a2;
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
+}
 body {
-    background-color: papayawhip;
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.my-button2 {
+    background-color: #4c90af; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.my-button2:hover {
+    background-color: #4886a2;
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
+}
+.my-button3 {
+    background-color: #4c90af; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.my-button3:hover {
+    background-color: #4886a2;
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
 }
