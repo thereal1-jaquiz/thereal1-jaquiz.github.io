@@ -1,0 +1,18 @@
+.grid-container {
+  display: grid;
+  grid: 'red red red' 200px
+        'red red red' 300px
+        'red red red' 100px
+        / 100px 1fr 5vh;
+}
+
+.grid-item {
+    background-color: lightblue;
+  transition: 1s ease; /* Smooth transition for the effect */
+}
+
+/* Define the hover effect for the specific class */
+.grid-item:hover {
+  border: 2px solid black;
+  border-radius: 25px;
+}
