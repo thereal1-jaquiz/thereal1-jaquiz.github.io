@@ -2,10 +2,9 @@
                 display: grid;
                 height: 100vh;
                 grid:
-                'head head head head' 450px
-                'break break break break' 50px
-                'menu main main2 menu2' 450px
-                /1fr 1fr 1fr 1fr;
+                'head head head' 530px
+                'menu main menu2' 530px
+                /1fr 1fr 1fr;
                 margin-top: 20px;
                 place-items: baseline center;
             }
@@ -23,13 +22,6 @@
                 font-size: 24px;
                 color: darkblue
             }
-            #main2{
-                grid-area: main2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
             #menu2{
                 grid-area: menu2;
                 border: 2px solid black;
@@ -42,19 +34,15 @@
                 text-align: center;
                 font-size: 12px;
             }
-            #break{
-                grid-area: break;
-                text-align: center;
-                font-size: 12px;
-            }
           .home-section {
                 display: grid;
                 height: 100vh;
+                grid-row-gap: 50px;
                 grid:
-                'head head head head' 350px
-                'menu main main2 menu2' 350px
-                'foot foot foot foot' 350px
-                /375px 375px 375px 375px;
+                'head head' 1fr
+                'main main2' 1fr
+                'foot foot' 1fr
+                /400px 1fr;
             }
             #header{
                 grid-area: head;
@@ -63,22 +51,8 @@
                 font-size: 24px;
                 color: darkblue
             }
-            #menu{
-                grid-area: menu;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
             #main2{
                 grid-area: main2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #menu2{
-                grid-area: menu2;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
@@ -346,6 +320,7 @@ nav {
     background-color: whitesmoke;
     padding: 10px;
     text-align: center;
+    position: sticky;
 }
 .cool-effect {
     transition: transform 1s ease;
