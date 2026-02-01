@@ -1,72 +1,63 @@
           .videos-section {
                 display: grid;
-                height: 100vh;
+                height: 115vh;
                 grid:
-                'head head head' 530px
-                'menu main menu2' 530px
-                /1fr 1fr 1fr;
+                'vid vid vid' 530px
+                'vid vid vid' 530px
+                /410px 410px 410px;
                 margin-top: 20px;
                 place-items: baseline center;
+                margin-left: auto;
+                margin-right: auto;
             }
-            #header{
-                grid-area: head;
+            #videos{
+                grid-area: vid;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
-                color: darkblue
-            }
-            #menu{
-                grid-area: menu;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #menu2{
-                grid-area: menu2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #main{
-                grid-area: main;
-                text-align: center;
-                font-size: 12px;
+                color: darkblue;
+                margin-left: 30px;
             }
           .home-section {
                 display: grid;
-                height: 100vh;
+                height: 350px;
+                grid-row-gap: 50px;
+                grid: 
+                'img overview' 1fr
+                /400px 800px;
+            }
+            #overview{
+                grid-area: overview;
+                border: 2px solid black;
+                text-align: center;
+                font-size: 24px;
+                color: darkblue
+            }
+            #img{
+                grid-area: img;
+                border: 2px solid black;
+                text-align: center;
+                font-size: 24px;
+                color: darkblue
+            }
+            .intro-section {
+                display: grid;
+                height: 700;
                 grid-row-gap: 50px;
                 grid:
-                'head head' 1fr
-                'main main2' 1fr
-                'foot foot' 1fr
-                /400px 1fr;
+                'picture text' 1fr
+                'picture text' 1fr
+                /400px 800px;
             }
-            #header{
-                grid-area: head;
+            #picture{
+                grid-area: picture;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
                 color: darkblue
             }
-            #main2{
-                grid-area: main2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #main{
-                grid-area: main;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #footer{
-                grid-area: foot;
+            #text{
+                grid-area: text;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
@@ -76,48 +67,20 @@
                 display: grid;
                 height: 100vh;
                 grid:
-                'head head head head' 350px
-                'menu main main2 menu2' 350px
-                'foot foot foot foot' 350px
-                /375px 375px 375px 375px;
+                'fact beaver' 350px
+                'fact beaver' 350px
+                'fact beaver' 350px
+                /1fr 375px;
             }
-            #header{
+            #fact{
                 grid-area: head;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
                 color: darkblue
             }
-            #menu{
+            #beaver{
                 grid-area: menu;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #main2{
-                grid-area: main2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #menu2{
-                grid-area: menu2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #main{
-                grid-area: main;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #footer{
-                grid-area: foot;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
@@ -180,14 +143,10 @@
     color: white;
     padding: 7px 24px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 24px;
     margin: 1px 2px;
-    cursor: pointer;
   position: relative;
-  color: #000;
-  text-decoration: none; 
   display: inline-block; 
 }
 
@@ -198,7 +157,8 @@
   height: 3px;
   left: 0;
   bottom: 0; 
-  background-color: #000; 
+  background-color: deepskyblue; 
+border-radius: 10px; 
   transform: scaleX(0); 
   transform-origin: center; 
   transition: transform 0.3s ease-out; 
@@ -214,14 +174,10 @@
     color: white;
     padding: 7px 24px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 24px;
     margin: 1px 2px;
-    cursor: pointer;
   position: relative;
-  color: #000;
-  text-decoration: none; 
   display: inline-block; 
 }
 
@@ -232,8 +188,9 @@
   height: 3px;
   left: 0;
   bottom: 0; 
-  background-color: #000; 
+  background-color: deepskyblue; 
   transform: scaleX(0); 
+border-radius: 10px; 
   transform-origin: center; 
   transition: transform 0.3s ease-out; 
 }
@@ -248,54 +205,16 @@ body {
     padding: 0;
     background-color: lightskyblue;
 }
-.my-button2 {
-        background-color: #ffffff00;
-    border: none;
-    color: white;
-    padding: 7px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    margin: 1px 2px;
-    cursor: pointer;
-  position: relative;
-  color: #000;
-  text-decoration: none; 
-  display: inline-block; 
-}
-
-.my-button2::after {
-  content: '';
-  position: absolute;
-  width: 100%; 
-  height: 3px;
-  left: 0;
-  bottom: 0; 
-  background-color: #000; 
-  transform: scaleX(0); 
-  transform-origin: center; 
-  transition: transform 0.3s ease-out; 
-}
-
-.my-button2:hover::after {
-  transform: scaleX(0.80);
-  transform-origin: center;
-}
 .my-button3 {
     background-color: #ffffff00;
     border: none;
     color: white;
     padding: 7px 24px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 24px;
     margin: 1px 2px;
-    cursor: pointer;
   position: relative;
-  color: #000;
-  text-decoration: none; 
   display: inline-block; 
 }
 
@@ -306,7 +225,8 @@ body {
   height: 3px;
   left: 0;
   bottom: 0; 
-  background-color: #000; 
+  background-color: deepskyblue;
+  border-radius: 10px; 
   transform: scaleX(0); 
   transform-origin: center; 
   transition: transform 0.3s ease-out; 
@@ -316,16 +236,21 @@ body {
   transform: scaleX(0.80);
   transform-origin: center;
 }
-nav {
+.navbar {
     background-color: whitesmoke;
     padding: 10px;
     text-align: center;
     position: sticky;
+    top: 20px;
+    z-index: 1000;
+    width: 800px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .cool-effect {
     transition: transform 1s ease;
 }
 .cool-effect:hover {
     transform: scale(1.05);
-    border: 2px solid black;
 }
