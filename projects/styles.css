@@ -5,10 +5,10 @@
                 'vid vid vid' 530px
                 'vid vid vid' 530px
                 /410px 410px 410px;
+                column-gap: 55px;
                 margin-top: 20px;
                 place-items: baseline center;
-                margin-left: auto;
-                margin-right: auto;
+                justify-content: center;
             }
             #videos{
                 grid-area: vid;
@@ -21,7 +21,7 @@
           .home-section {
                 display: grid;
                 height: 350px;
-                grid-row-gap: 50px;
+                row-gap: 50px;
                 grid: 
                 'img overview' 1fr
                 /400px 800px;
@@ -42,8 +42,8 @@
             }
             .intro-section {
                 display: grid;
-                height: 700;
-                grid-row-gap: 50px;
+                height: 700px;
+                row-gap: 50px;
                 grid:
                 'picture text' 1fr
                 'picture text' 1fr
@@ -90,54 +90,20 @@
                 display: grid;
                 height: 100vh;
                 grid:
-                'head head head head' 350px
-                'menu main main2 menu2' 350px
-                'foot foot foot foot' 350px
-                /375px 375px 375px 375px;
+                'book book book book' 1fr
+                'book book book book' 1fr
+                /300px 300px 300px 300px;
+                gap: 35px 45px;
+                justify-content: center;
             }
-            #header{
-                grid-area: head;
+            #book{
+                grid-area: book;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
                 color: darkblue
             }
-            #menu{
-                grid-area: menu;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #main2{
-                grid-area: main2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #menu2{
-                grid-area: menu2;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #main{
-                grid-area: main;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-            #footer{
-                grid-area: foot;
-                border: 2px solid black;
-                text-align: center;
-                font-size: 24px;
-                color: darkblue
-            }
-.my-home-button {
+                .my-home-button {
     background-color: #ffffff00;
     border: none;
     color: white;
@@ -247,10 +213,23 @@ body {
     border-radius: 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 45px;
 }
 .cool-effect {
     transition: transform 1s ease;
 }
 .cool-effect:hover {
     transform: scale(1.05);
+}
+.another-cool-effect {
+    transition: transform 1s ease;
+}
+.another-cool-effect:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+.another-cool-effect2 {
+    transition: transform 1s ease;
+}
+.another-cool-effect2:hover {
+    transform: scale(1.05) rotate(-5deg);
 }
