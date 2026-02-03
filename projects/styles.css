@@ -67,20 +67,24 @@
                 display: grid;
                 height: 100vh;
                 grid:
-                'fact beaver' 350px
-                'fact beaver' 350px
-                'fact beaver' 350px
-                /1fr 375px;
+                'fact beaver' 1fr
+                'fact beaver' 1fr
+                'fact beaver' 1fr
+                /800px 375px;
+                gap: 20px 50px;
+                justify-content: center;
+                margin-left: 50px;
+                margin-right: 50px;
             }
             #fact{
-                grid-area: head;
+                grid-area: fact;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
                 color: darkblue
             }
             #beaver{
-                grid-area: menu;
+                grid-area: beaver;
                 border: 2px solid black;
                 text-align: center;
                 font-size: 24px;
@@ -222,14 +226,20 @@ body {
     transform: scale(1.05);
 }
 .another-cool-effect {
-    transition: transform 1s ease;
+    transition: transform 0.75s ease;
 }
 .another-cool-effect:hover {
-    transform: scale(1.05) rotate(5deg);
+    transform: rotate(5deg);
 }
 .another-cool-effect2 {
     transition: transform 1s ease;
 }
 .another-cool-effect2:hover {
-    transform: scale(1.05) rotate(-5deg);
+    transform: rotate(-5deg);
+}
+.shift-up {
+    transform: translateY(-300px);
+}
+.shift-up-dos {
+    transform: translateY(-220px);
 }
