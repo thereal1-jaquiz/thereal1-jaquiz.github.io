@@ -20,50 +20,20 @@
     ctx.fillStyle = "#FFDFBD";
     ctx.arc(400, 400, 210, 0, 2 * Math.PI);
     ctx.fill();
-
-    ctx.fillRect(320, 450, 150, 270);
-
-    ctx.beginPath();
-    ctx.moveTo(470, 720); //move to starting point
-    ctx.lineTo(470, 650); //draw line to next point
-    ctx.lineTo(540, 650); //draw line to next point
-    ctx.lineTo(470, 720); //move to starting point
-    ctx.fill();
-    ctx.closePath();
-
+    
     ctx.beginPath();
     ctx.moveTo(320, 720); //move to starting point
-    ctx.lineTo(320, 650); //draw line to next point
+    ctx.lineTo(470, 720);
+    ctx.lineTo(540, 650);
+    ctx.lineTo(605, 510);
+    ctx.lineTo(610, 400); //draw line to next point
+    ctx.lineTo(190, 400); //draw line to next point
+    ctx.lineTo(195, 510); //draw line to next point
     ctx.lineTo(250, 650); //draw line to next point
     ctx.lineTo(320, 720); //move to starting point
     ctx.fill();
     ctx.closePath();
-
-    ctx.beginPath();
-    ctx.ellipse(280, 550, 131, 78, Math.PI/2.5, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.closePath();
-
-    ctx.beginPath();
-    ctx.moveTo(195, 510); //move to starting point
-    ctx.lineTo(230, 450); //draw line to next point
-    ctx.lineTo(190, 400); //draw line to next point
-    ctx.lineTo(195, 510); //move to starting point
-    ctx.fill();
-    ctx.closePath();
-
-    ctx.beginPath();
-    ctx.ellipse(520, 550, 131, 78, Math.PI/1.5, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.closePath();
-
-    ctx.beginPath();
-    ctx.moveTo(195, 510); //move to starting point
-    ctx.lineTo(230, 450); //draw line to next point
-    ctx.lineTo(190, 400); //draw line to next point
-    ctx.lineTo(195, 510); //move to starting point
-    ctx.fill();
-    ctx.closePath();
-    </script>
+        </script>
 </body>
 </html>
+
