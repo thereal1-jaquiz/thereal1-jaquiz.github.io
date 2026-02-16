@@ -16,8 +16,8 @@
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
 
-    // Face
-    ctx.fillStyle = "#FFDFBD";
+        // Face
+    ctx.fillStyle = "#FFE4CF";
     ctx.arc(400, 400, 210, 0, 2 * Math.PI);
     ctx.fill();
 
@@ -34,8 +34,26 @@
     ctx.fill();
     ctx.closePath();
 
+            //clothing
+        ctx.fillStyle = "#485063"
+
+    ctx.beginPath();
+    ctx.moveTo(530, 740); //move to starting point
+    ctx.lineTo(700, 780);
+    ctx.lineTo(730, 800)
+    ctx.lineTo(800, 880);
+    ctx.lineTo(800, 1000);
+    ctx.lineTo(0, 1000);
+    ctx.lineTo(0, 880);
+    ctx.lineTo(70, 800);
+    ctx.lineTo(110, 780);
+    ctx.lineTo(260, 740);
+    ctx.lineTo(525, 740); //move to starting point
+    ctx.fill();
+    ctx.closePath();
+
     // Neck
-    ctx.fillStyle = "#FFDABD";
+    ctx.fillStyle = "#FFE1C9";
    
     ctx.beginPath();
     ctx.moveTo(280, 680); //move to starting point
@@ -71,22 +89,7 @@
     );
     ctx.fill();
 
-
-    //clothing
-        ctx.fillStyle = "lightblue"
-
-    ctx.beginPath();
-    ctx.moveTo(x, y); //move to starting point
-    ctx.lineTo(x, y);
-    ctx.lineTo(x, y);
-    ctx.lineTo(x, y);
-    ctx.lineTo(x, y);
-    ctx.lineTo(x, y);
-    ctx.lineTo(x, y); //move to starting point
-    ctx.fill();
-    ctx.closePath();
-
-
+    //Details for clothing
         </script>
 </body>
 </html>
