@@ -138,6 +138,94 @@
     ctx.fill();
     ctx.closePath();
 
+    //Nose, Mouth, and other stuff, wish i had more time to work on this :(
+        ctx.fillStyle = "#E8BCAE";
+    ctx.beginPath();
+    ctx.ellipse(395, 640, 60, 16, 0, 0, 1 * Math.PI);
+    ctx.fill();
+    ctx.ellipse(375, 640, 40, 12, 0, 1 * Math.PI, 0);
+    ctx.fill();
+    ctx.ellipse(415, 640, 40, 12, 0, 1 * Math.PI, 0);
+    ctx.fill();
+
+
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(400, 500);
+    ctx.lineTo(375, 575);
+    ctx.lineTo(400, 575);
+    ctx.stroke();
+    ctx.moveTo(330, 640);
+    ctx.lineTo(460, 640);
+    ctx.stroke();
+    ctx.closePath();
+
+    //eyebrows
+    ctx.fillStyle = "#EBD5B2";
+    ctx.beginPath();
+    ctx.moveTo(255, 440);
+    ctx.lineTo(255, 445);
+    ctx.lineTo(320, 430);
+    ctx.lineTo(355, 440);
+    ctx.lineTo(355, 420);
+    ctx.lineTo(315, 415);
+    ctx.fill();
+        ctx.beginPath();
+    ctx.moveTo(550, 440);
+    ctx.lineTo(550, 445);
+    ctx.lineTo(485, 430);
+    ctx.lineTo(450, 440);
+    ctx.lineTo(450, 420);
+    ctx.lineTo(490, 415);
+    ctx.fill();
+        ctx.closePath();
+
+        // Ears
+    ctx.fillStyle = "#FFE4CF";
+    ctx.beginPath();
+    ctx.ellipse(190, 500, 30, 60, Math.PI/-10.5, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.ellipse(610, 500, 30, 60, Math.PI/10.5, 0, 2 * Math.PI);
+    ctx.fill();
+
+    // Hair... or atleast an attempt at it lol
+    ctx.fillStyle = "#EBD5B2";
+    ctx.beginPath();
+    ctx.ellipse(400, 375, 220, 200, 0, Math.PI, 0);
+    ctx.moveTo(180, 375);
+    ctx.lineTo(195, 395);
+    ctx.lineTo(210, 375);
+    ctx.lineTo(225, 395);
+    ctx.lineTo(240, 375);
+    ctx.lineTo(255, 395);
+    ctx.lineTo(270, 375);
+    ctx.lineTo(285, 395);
+    ctx.lineTo(300, 375);
+    ctx.lineTo(315, 395);
+    ctx.lineTo(330, 375);
+    ctx.lineTo(345, 395);
+    ctx.lineTo(360, 375);
+    ctx.lineTo(375, 395);
+    ctx.lineTo(390, 375);
+    ctx.lineTo(405, 395);
+    ctx.lineTo(420, 375);    
+    ctx.lineTo(435, 395);
+    ctx.lineTo(450, 375);
+    ctx.lineTo(465, 395);
+    ctx.lineTo(480, 375);
+    ctx.lineTo(495, 395);
+    ctx.lineTo(510, 375);
+    ctx.lineTo(525, 395);
+    ctx.lineTo(540, 375);
+    ctx.lineTo(555, 395);
+    ctx.lineTo(570, 375);
+    ctx.lineTo(585, 395);
+    ctx.lineTo(600, 375);
+    ctx.lineTo(615, 395);
+    ctx.lineTo(630, 375);
+    ctx.fill();
         </script>
 </body>
 </html>
