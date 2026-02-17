@@ -31,16 +31,11 @@
     ctx.lineTo(195, 510); //draw line to next point
     ctx.lineTo(250, 650); //draw line to next point
     ctx.lineTo(320, 720); //move to starting point
-    ctx.fill();
     ctx.closePath();
-
-     //Facial Features
-    ctx.fillStyle = "#73786B"
-    ctx.arc(550,450,10,0,2 * Math.PI)
-    ctx.fill()
+    ctx.fill();
     
-            //clothing
-        ctx.fillStyle = "#485063"
+    //clothing
+    ctx.fillStyle = "#485063"
 
     ctx.beginPath();
     ctx.moveTo(530, 740); //move to starting point
@@ -82,6 +77,7 @@
     0,          //start
     1 * Math.PI //stop
     );
+    ctx.fill();
 
     ctx.ellipse(
     395,780,    //x, y of the center
@@ -91,6 +87,57 @@
     1 * Math.PI, //stop
     0
     );
+    ctx.fill();
+
+    // Facial features
+            // Left eye
+    ctx.fillStyle = "#ffffff";
+    ctx.beginPath();
+        ctx.ellipse(490, 460, 35, 18, 0, 0, 2 * Math.PI);
+    ctx.fill();
+
+        ctx.fillStyle = "#637A56";
+    ctx.beginPath();
+    ctx.arc(490, 460, 16, 0, 2 * Math.PI);
+    ctx.fill();
+        ctx.fillStyle = "#000000";
+    ctx.beginPath();
+    ctx.arc(490, 460, 11, 0, 2 * Math.PI);
+    ctx.fill();
+        ctx.fillStyle = "#ffffff";
+    ctx.beginPath();
+    ctx.moveTo(489, 457);
+    ctx.lineTo(493, 460);
+    ctx.lineTo(502, 452);
+    ctx.lineTo(493, 447);
+    ctx.lineTo(489, 457);
+    ctx.fill();
+    ctx.closePath();
+
+        // Right eye
+    ctx.fillStyle = "#ffffff";
+    ctx.beginPath();
+        ctx.ellipse(310, 460, 35, 18, 0, 0, 2 * Math.PI);
+    ctx.fill();
+
+        ctx.fillStyle = "#637A56";
+    ctx.beginPath();
+    ctx.arc(310, 460, 16, 0, 2 * Math.PI);
+    ctx.fill();
+        ctx.fillStyle = "#000000";
+    ctx.beginPath();
+    ctx.arc(310, 460, 11, 0, 2 * Math.PI);
+    ctx.fill();
+        ctx.fillStyle = "#ffffff";
+    ctx.beginPath();
+    ctx.moveTo(309, 457);
+    ctx.lineTo(313, 460);
+    ctx.lineTo(322, 452);
+    ctx.lineTo(313, 447);
+    ctx.lineTo(309, 457);
+    ctx.fill();
+    ctx.closePath();
+
         </script>
 </body>
 </html>
