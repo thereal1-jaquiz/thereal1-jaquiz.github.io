@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>If Statements</title>
+</head>
+<body>
+    <h1 style="text-align: center;">If Statements</h1>
+    <p style="text-align: center;">Check the console for the output.</p>
+<script>
+let temp = 80;
+let season = "summer";
+
+if (temp >= 80 && season === "summer") {
+    goToBeach();
+} else if (temp >= 60 && season === "spring") {
+    goForHike();
+} else if (temp >= 50 && season === "fall") {
+    goToPark();
+} else if (temp >= 30 && season === "winter") {
+    goSkiing();
+} else {
+    stayInside();
+}
+
+function goToBeach() {
+    console.log("Let's go to the beach!");
+}
+
+function goForHike() {
+    console.log("Let's go for a hike!");
+}
+
+function goToPark() {
+    console.log("Let's go to the park!");
+}
+
+function goSkiing() {
+    console.log("Let's go skiing!");
+}
+
+function stayInside() {
+    console.log("Let's stay inside and watch a movie.");
+}  
+</script>
+</body>
+</html>
