@@ -211,22 +211,62 @@ function Courtyard() {
     clear();
     print("\nYou are in the courtyard!");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tmain hall" +
+        "\n\tplay basketball" +
+        "\n\ttalk to big gus" +
+        "\n\tworkout");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "main hall") {
+            MainHall();
+        } else if (input.toLowerCase() === "play basketball") {
+            PlayBasketball();
+        } else if (input.toLowerCase() === "talk to big gus") {
+            TalkToBigGus();
+        } else if (input.toLowerCase() === "workout") {
+            Workout();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(Courtyard);
         }
     }
     waitForInput(processInput);
 }
 
-function locationB() {
+function Spoon() {
     clear();
-    print("\nYou are in location B!");
+    print("\nYou smuggled a spoon. Mabye it will come in handy later.");
+    print("\nIts free time. Go to the courtyard.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tcourtyard");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "courtyard") {
+            Courtyard();
+        } else {
+            stayHere();
+            waitThenCall(Courtyard);
+        }
+    }
+    waitForInput(processInput);
+}
+function Fork() {
+    clear();
+    print("\nYou smuggled a fork.");
+    print("\nIts free time. Go to the courtyard.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tcourtyard");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "courtyard") {
+            Courtyard();
+        } else {
+            stayHere();
+            waitThenCall(Courtyard);
+        }
+    }
+    waitForInput(processInput);
+}
     print("\nWhat would you like to do next? Say one of these choices:" +
         "\n\tlocationA");
     
@@ -239,23 +279,7 @@ function locationB() {
         }
     }
     waitForInput(processInput);
-}
-function locationB() {
-    clear();
-    print("\nYou are in location B!");
-    print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
-            stayHere();
-            waitThenCall(locationB);
-        }
-    }
-    waitForInput(processInput);
-}
+
 function Plate() {
     clear();
     GameOverAscii();
@@ -273,6 +297,86 @@ function Plate() {
     waitForInput(processInput);
 }
 
+function MainHall() {
+    clear();
+    print("\nYou are in the main hall.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function PlayBasketball() {
+    clear();
+    Score();
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationB() {
+    clear();
+    print("\nYou are in location B.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationB() {
+    clear();
+    print("\nYou are in location B.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function locationB() {
+    clear();
+    print("\nYou are in location B.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
 function locationB() {
     clear();
     print("\nYou are in location B.");
@@ -309,6 +413,39 @@ function HowWasLunch() {
     var arr = ["You ate. Lunch was good", "You ate. Lunch was disgusting", "You ate. Lunch was okay", "You ate. Lunch wasn't very good"];
     var random_string = arr[Math.floor(Math.random() * arr.length)];
     print("\n" + random_string);
+}
+
+//BASKETBALL WIN OR LOSE FUNCTION
+
+create_random_string(2);
+
+function create_random_string(string_length){
+var random_string = '';
+var characters = '123456789';
+for(var i, i = 0; i < string_length; i++){
+random_string += characters.charAt(Math.floor(Math.random() * characters.length))
+};
+return random_string;
+}
+
+function WinLose() {
+    if (ScoreA > ScoreB) {
+        print("You won!");
+    } else if (ScoreA < ScoreB) {
+        print("You lost!");
+    } else {
+        print("It's a tie!");
+    }
+}
+
+function Score() {
+
+    ScoreA = create_random_string(2)
+    ScoreB = create_random_string(2)
+    
+print("You played basketball. It was fun.");
+WinLose();
+print("The final score was " + ScoreA + " to " + ScoreB + ".");
 }
 
 function GameOverAscii() {
