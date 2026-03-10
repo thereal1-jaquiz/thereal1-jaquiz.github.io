@@ -301,14 +301,20 @@ function MainHall() {
     clear();
     print("\nYou are in the main hall.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tcellblock a" +
+        "\n\tcellblock b" +
+        "\n\tupstairs");
     
     function processInput(input){
         if (input.toLowerCase() === "locationa") {
-            locationA();
+            CellBlockA();
+        } else if (input.toLowerCase() === "locationb") {
+            CellBlockB();
+        } else if (input.toLowerCase() === "upstairs") {
+            Upstairs();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(WorkTime);
         }
     }
     waitForInput(processInput);
@@ -329,10 +335,107 @@ function PlayBasketball() {
     }
     waitForInput(processInput);
 }
+function Workout() {
+    clear();
+    print("\nYou worked out in the gym.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
 function locationB() {
     clear();
     print("\nYou are in location B.");
     print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function WorkTime() {
+    clear();
+    print("\nYou are in location B.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function CellBlockB() {
+    clear();
+    print("\nYou are in Cell Block B. There is nothing to do here.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tlocationA");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "locationa") {
+            locationA();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function Upstairs() {
+    clear();
+    print("\nYou went upstairs.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\tgo to cellblock c");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "cellblock c") {
+            CellBlockC();
+        } else {
+            stayHere();
+            waitThenCall(WorkTime);
+        }
+    }
+    waitForInput(processInput);
+}
+function CellBlockC() {
+    clear();
+    print("\nYou are in Cell Block C.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n\ttalk to Darren");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "talk to darren") {
+            Darren();
+        } else {
+            stayHere();
+            waitThenCall(locationB);
+        }
+    }
+    waitForInput(processInput);
+}
+function Darren() {
+    clear();
+    print("\nYou are talking to Darren.");
+    print("\nDarren said blah.");
+    print("\nWhat would you like to say next? Say one of these choices:" +
         "\n\tlocationA");
     
     function processInput(input){
@@ -393,6 +496,7 @@ function locationB() {
     }
     waitForInput(processInput);
 }
+
 
 //finally, make sure you customize this to tell it what should happen at the
 //very start. For this simple example, any input will bring you
