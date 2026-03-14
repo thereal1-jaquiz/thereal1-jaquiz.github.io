@@ -391,11 +391,11 @@ function VisitorCenter() {
         "\n\tColin");
     
     function processInput(input){
-        if (input.toLowerCase() === "mom") {
+        if (input.toLowerCase() === "mom" || "Mom") {
             Mom();
-        } else if(input.toLowerCase() == "dad") {
+        } else if(input.toLowerCase() == "dad" || "Dad") {
             Dad();
-        } else if(input.toLowerCase() == "colin") {
+        } else if(input.toLowerCase() == "colin" || "Colin") {
             Colin();
         } else{
             stayHere();
