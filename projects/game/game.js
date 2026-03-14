@@ -393,16 +393,16 @@ function VisitorCenter() {
     function processInput(input){
         if (input.toLowerCase() === "mom") {
             Mom();
-        } else if(input.toLowerCase() == "dad") {
+        } else if (input.toLowerCase() === "dad") {
             Dad();
-        } else if(input.toLowerCase() == "colin") {
+        } else if (input.toLowerCase() === "colin") {
             Colin();
         } else{
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(WorkTime);
         }
     }
-
+    waitForInput(processInput);
 }
 
 function Colin() {
