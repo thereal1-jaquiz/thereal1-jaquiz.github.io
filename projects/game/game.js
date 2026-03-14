@@ -405,7 +405,7 @@ function VisitorCenter() {
 
 }
 
-function Colin() {
+function Colin(); {
 
 let talkedToColin = true
 
