@@ -2,8 +2,8 @@ let gameActive = true; //this variable is required.
                        //to stop the game, set it to false.
 
 //Declare your other global variables here
-
-
+let hasSpoon = false
+let talkedToColin = false
 //If you need, add any "helper" functions here
 
 
@@ -90,17 +90,29 @@ function Wait6pm() {
 }
 
 function Wait12am() {
-    clear();
+    if (hasSpoon = false) {
+        clear();
     print("\nYou waited...");
     print("\nThe time is now 12:00am.");
     print("\nWhat would you like to do next? Say one of these choices:" +
         "\n" +
-        "\n\t> wait");
+        "\n\t> wait");}
+
+    else if (hasSpoon = true) {
+        clear();
+    print("\nYou waited...");
+    print("\nThe time is now 12:00am.");
+    print("\nWhat would you like to do next? Say one of these choices:" +
+        "\n" +
+        "\n\t> wait" +
+        "\n\t> dig");}
     
     function processInput(input){
         if (input.toLowerCase() === "wait") {
             Wait6am();
-        } else {
+        } else if ((hasSpoon = true)&&(input.toLowerCase() === "wait")) {
+            DigHole();
+        }else{
             stayHere();
             waitThenCall(Wait6am);
         }
@@ -239,7 +251,7 @@ function Spoon() {
     print("\nIts free time. Go to the courtyard.");
     print("\nWhat would you like to do next? Say one of these choices:" +
         "\n\tcourtyard");
-    
+ hasSpoon = true
     function processInput(input){
         if (input.toLowerCase() === "courtyard") {
             Courtyard();
@@ -395,6 +407,8 @@ function VisitorCenter() {
 
 function Colin() {
 
+let talkedToColin = true
+
 }clear();
     print("\nYou talked to Colin.");
     print("\nYou guys planned a helicopter escape tomorrow at midnight in the courtyard.")
@@ -410,7 +424,7 @@ function Colin() {
         }
     }
     waitForInput(processInput);
-    
+
 function WorkTime() {
     clear();
     print("\nYou are in location B.");
@@ -492,18 +506,24 @@ function Darren() {
     }
     waitForInput(processInput);
 }
-function locationB() {
+function DigHole() {
     clear();
-    print("\nYou are in location B.");
-    print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+    print("\nMovie ball knowledge?.");
+    print("\nYou dug a hole to the courtyard; you can now go there.")
+    print("\nWhere would you like to go?" +
+        "\n\twait" +
+        "\n\tcourtyard");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "wait") {
+            Wait6am();
+        } else if((talkedToColin = true) && (input.toLowerCase() === "courtyard")){
+            Escape();
+        } else if((talkedToColin = true) && (input.toLowerCase() === "courtyard")){
+            Courtyard12am();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(Wait6am);
         }
     }
     waitForInput(processInput);
