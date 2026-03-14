@@ -366,22 +366,7 @@ function Workout() {
     }
     waitForInput(processInput);
 }
-function locationB() {
-    clear();
-    print("\nYou are in location B.");
-    print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
-            stayHere();
-            waitThenCall(locationB);
-        }
-    }
-    waitForInput(processInput);
-}
+
 function VisitorCenter() {
     clear();
     print("\nYou are in the visitor center.");
@@ -529,40 +514,37 @@ function DigHole() {
     }
     waitForInput(processInput);
 }
-function locationB() {
+function Escape() {
     clear();
-    print("\nYou are in location B.");
-    print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+    YouWinAscii();
+    print("\nYou and Colin were able to make a flawless escape.")
+    print("\n<b>Again?</b>")
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "restart") {
+            Start();
         } else {
             stayHere();
-            waitThenCall(locationB);
         }
     }
     waitForInput(processInput);
 }
-function locationB() {
+function Courtyard12am() {
     clear();
-    print("\nYou are in location B.");
-    print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+    GameOverAscii();
+    print("\nYou snuck into the courtyard but there was nothing there.");
+    print("\nYou ended up getting caught and were sent to solitary.");
+    print("\n<b>You Lost. If you would like to try again, please type 'restart' or press the restart button in the top right corner.</b>");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "restart") {
+            start();
         } else {
             stayHere();
-            waitThenCall(locationB);
         }
     }
     waitForInput(processInput);
 }
-
-
 //finally, make sure you customize this to tell it what should happen at the
 //very start. For this simple example, any input will bring you
 //to locationA
@@ -626,6 +608,19 @@ function GameOverAscii() {
    ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝      ██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗    ██╗██║ 
    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗    ╚██████╔╝ ╚████╔╝ ███████╗██║  ██║    ╚═╝╚██╗
     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝     ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝        ╚═╝
+
+    `);
+}
+
+function YouWinAscii() {
+    printAscii(`
+
+██╗   ██╗ ██████╗ ██╗   ██╗        ███████╗███████╗ ██████╗ █████╗ ██████╗ ███████╗██████╗ ██╗
+╚██╗ ██╔╝██╔═══██╗██║   ██║        ██╔════╝██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗██║
+ ╚████╔╝ ██║   ██║██║   ██║        █████╗  ███████╗██║     ███████║██████╔╝█████╗  ██║  ██║██║
+  ╚██╔╝  ██║   ██║██║   ██║        ██╔══╝  ╚════██║██║     ██╔══██║██╔═══╝ ██╔══╝  ██║  ██║╚═╝
+   ██║   ╚██████╔╝╚██████╔╝        ███████╗███████║╚██████╗██║  ██║██║     ███████╗██████╔╝██╗
+   ╚═╝    ╚═════╝  ╚═════╝         ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═════╝ ╚═╝
 
     `);
 }
