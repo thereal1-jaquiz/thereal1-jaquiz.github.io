@@ -396,7 +396,7 @@ function VisitorCenter() {
         } else if(input.toLowerCase() == "dad") {
             Dad();
         } else if(input.toLowerCase() == "colin") {
-            Colin();
+            Colin()
         } else{
             stayHere();
             waitThenCall(locationB);
@@ -405,7 +405,7 @@ function VisitorCenter() {
 
 }
 
-function Colin(); {
+function Colin() {
 
 let talkedToColin = true
 
