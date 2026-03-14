@@ -391,11 +391,11 @@ function VisitorCenter() {
         "\n\tColin");
     
     function processInput(input){
-        if (input.toLowerCase() === "mom") {
+        if (input.toLowerCase() === "mom" || "Colin") {
             Mom();
-        } else if (input.toLowerCase() === "dad") {
+        } else if (input.toLowerCase() === "dad" || "Colin") {
             Dad();
-        } else if (input.toLowerCase() === "colin") {
+        } else if (input.toLowerCase() === "colin" || "Colin") {
             Colin();
         } else{
             stayHere();
@@ -427,16 +427,17 @@ clear();
 }
 function WorkTime() {
     clear();
-    print("\nYou are in location B.");
-    print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+    print("\nYou are in the work hall.");
+    print("\nYou finished the work assigned to you.")
+    print("\nWhere would you like to go next? Say one of these choices:" +
+        "\n\tcell");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "cell") {
+            CellBlockA();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(CellBlockA);
         }
     }
     waitForInput(processInput);
