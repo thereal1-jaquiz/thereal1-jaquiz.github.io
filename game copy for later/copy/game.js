@@ -303,8 +303,7 @@ function MainHall() {
     print("\nWhat would you like to do next? Say one of these choices:" +
         "\n\tcellblock a" +
         "\n\tcellblock b" +
-        "\n\tupstairs" +
-        "\n\tvisitor center");
+        "\n\tupstairs");
     
     function processInput(input){
         if (input.toLowerCase() === "locationa") {
@@ -312,9 +311,7 @@ function MainHall() {
         } else if (input.toLowerCase() === "locationb") {
             CellBlockB();
         } else if (input.toLowerCase() === "upstairs") {
-            Upstairs();        
-        } else if (input.toLowerCase() === "visitor center") {
-            VisitorCenter();
+            Upstairs();
         } else {
             stayHere();
             waitThenCall(WorkTime);
@@ -370,47 +367,6 @@ function locationB() {
     }
     waitForInput(processInput);
 }
-function VisitorCenter() {
-    clear();
-    print("\nYou are in the visitor center.");
-    print("\nWho would you like to call? Say one of these choices:" +
-        "\n\tMom" +
-        "\n\tDad" +
-        "\n\tColin");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "mom") {
-            Mom();
-        } else if(input.toLowerCase() == "dad") {
-            Dad();
-        } else if(input.toLowerCase() == "colin") {
-            Colin();
-        } else{
-            stayHere();
-            waitThenCall(locationB);
-        }
-    }
-
-}
-
-function Colin() {
-
-}clear();
-    print("\nYou talked to Colin.");
-    print("\nYou guys planned a helicopter escape tomorrow at midnight in the courtyard.")
-    print("\nAnyway, it's time for work" +
-        "\n\t >work");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "work") {
-            WorkTime();
-        } else {
-            stayHere();
-            waitThenCall(WorkTime);
-        }
-    }
-    waitForInput(processInput);
-    
 function WorkTime() {
     clear();
     print("\nYou are in location B.");

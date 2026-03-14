@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Jump</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <div id="ui">
+            <div id="score">Score: <span id="score-value">0</span></div>
+            <div id="high-score">High Score: <span id="high-score-value">0</span></div>
+        </div>
+        
+        <div id="start-screen">
+            <h1>CUBE JUMP</h1>
+            <p>Press SPACE or TAP to jump</p>
+            <div id="mode-selector">
+                <button class="mode-btn active" data-mode="cube">CUBE</button>
+                <button class="mode-btn" data-mode="ship">SHIP</button>
+                <button class="mode-btn" data-mode="ufo">UFO</button>
+                <button class="mode-btn" data-mode="spider">SPIDER</button>
+                <button class="mode-btn" data-mode="wave">WAVE</button>
+                <button class="mode-btn" data-mode="robot">ROBOT</button>
+            </div>
+            <button id="start-button">START GAME</button>
+        </div>
+        
+        <div id="game-over-screen" class="hidden">
+            <h1>GAME OVER</h1>
+            <p>Score: <span id="final-score">0</span></p>
+            <button id="restart-button">PLAY AGAIN</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
