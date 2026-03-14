@@ -396,7 +396,7 @@ function VisitorCenter() {
         } else if(input.toLowerCase() == "dad") {
             Dad();
         } else if(input.toLowerCase() == "colin") {
-            Colin()
+            Colin();
         } else{
             stayHere();
             waitThenCall(locationB);
@@ -409,7 +409,7 @@ function Colin() {
 
 let talkedToColin = true
 
-}clear();
+clear();
     print("\nYou talked to Colin.");
     print("\nYou guys planned a helicopter escape tomorrow at midnight in the courtyard.")
     print("\nAnyway, it's time for work" +
@@ -424,7 +424,7 @@ let talkedToColin = true
         }
     }
     waitForInput(processInput);
-
+}
 function WorkTime() {
     clear();
     print("\nYou are in location B.");
