@@ -2,8 +2,8 @@ let gameActive = true; //this variable is required.
                        //to stop the game, set it to false.
 
 //Declare your other global variables here
-let hasSpoon = false
-let talkedToColin = false
+let hasSpoon = false;
+let talkedToColin = false;
 //If you need, add any "helper" functions here
 
 
@@ -110,7 +110,7 @@ function Wait12am() {
     function processInput(input){
         if (input.toLowerCase() === "wait") {
             Wait6am();
-        } else if ((hasSpoon = true)&&(input.toLowerCase() === "wait")) {
+        } else if ((hasSpoon = true)&&(input.toLowerCase() === "dig")) {
             DigHole();
         }else{
             stayHere();
@@ -251,7 +251,7 @@ function Spoon() {
     print("\nIts free time. Go to the courtyard.");
     print("\nWhat would you like to do next? Say one of these choices:" +
         "\n\tcourtyard");
- hasSpoon = true
+hasSpoon = true
     function processInput(input){
         if (input.toLowerCase() === "courtyard") {
             Courtyard();
@@ -337,12 +337,13 @@ function MainHall() {
 function PlayBasketball() {
     clear();
     Score();
+    print("\nIt's time for work!")
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\twork");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "work") {
+            WorkTime();
         } else {
             stayHere();
             waitThenCall(locationB);
@@ -376,11 +377,11 @@ function VisitorCenter() {
         "\n\tColin");
     
     function processInput(input){
-        if (input.toLowerCase() === "mom" || "Colin") {
+        if (input.toLowerCase() === "mom") {
             Mom();
-        } else if (input.toLowerCase() === "dad" || "Colin") {
+        } else if (input.toLowerCase() === "dad") {
             Dad();
-        } else if (input.toLowerCase() === "colin" || "Colin") {
+        } else if (input.toLowerCase() === "colin") {
             Colin();
         } else{
             stayHere();
@@ -392,7 +393,7 @@ function VisitorCenter() {
 
 function Colin() {
 
-let talkedToColin = true
+talkedToColin = true;
 
 clear();
     print("\nYou talked to Colin.");
