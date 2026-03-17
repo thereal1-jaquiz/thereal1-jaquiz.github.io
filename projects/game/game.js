@@ -124,10 +124,11 @@ function GoToLunch() {
     clear();
     print("\nYou are in the cafeteria!");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\teat" +
-        "\n\ttalk to Jerry" +
-        "\n\ttalk to Gary" +
-        "\n\tsmuggle");
+        "\n" +
+        "\n\t> eat" +
+        "\n\t> talk to Jerry" +
+        "\n\t> talk to Gary" +
+        "\n\t> smuggle");
     
     
     function processInput(input){
@@ -151,7 +152,8 @@ function Eat() {
     HowWasLunch();
     print("\nIts free time. Go to the courtyard.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tcourtyard");
+        "\n" +
+        "\n\t> courtyard");
     
     function processInput(input){
         if (input.toLowerCase() === "courtyard") {
@@ -168,7 +170,8 @@ function TalkToJerry() {
     print("\nYou talked to Jerry. He told you to talk to Darren in Cell Block C.");
     print("\nIts free time. Go to the courtyard.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tcourtyard");
+        "\n" +
+        "\n\t> courtyard");
     
     function processInput(input){
         if (input.toLowerCase() === "courtyard") {
@@ -185,7 +188,8 @@ function TalkToGary() {
     print("\nYou talked to Gary. It was a waste of time.");
     print("\nIts free time. Go to the courtyard.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tcourtyard");
+        "\n" +
+        "\n\t> courtyard");
     
     function processInput(input){
         if (input.toLowerCase() === "courtyard") {
@@ -200,9 +204,10 @@ function TalkToGary() {
 function Smuggle() {
     clear();
     print("\nWhat would you like to smuggle? Say one of these choices:" +
-        "\n\tfork" +
-        "\n\tspoon" +
-        "\n\tplate");
+        "\n" +
+        "\n\t> fork" +
+        "\n\t> spoon" +
+        "\n\t> plate");
     
     function processInput(input){
         if (input.toLowerCase() === "fork") {
@@ -223,10 +228,11 @@ function Courtyard() {
     clear();
     print("\nYou are in the courtyard!");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tmain hall" +
-        "\n\tplay basketball" +
-        "\n\ttalk to big gus" +
-        "\n\tworkout");
+        "\n" +
+        "\n\t> main hall" +
+        "\n\t> play basketball" +
+        "\n\t> talk to big gus" +
+        "\n\t> workout");
     
     function processInput(input){
         if (input.toLowerCase() === "main hall") {
@@ -250,7 +256,8 @@ function Spoon() {
     print("\nYou smuggled a spoon. Mabye it will come in handy later.");
     print("\nIts free time. Go to the courtyard.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tcourtyard");
+        "\n" +
+        "\n\t> courtyard");
 hasSpoon = true
     function processInput(input){
         if (input.toLowerCase() === "courtyard") {
@@ -267,7 +274,8 @@ function Fork() {
     print("\nYou smuggled a fork.");
     print("\nIts free time. Go to the courtyard.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tcourtyard");
+        "\n" +
+        "\n\t> courtyard");
     
     function processInput(input){
         if (input.toLowerCase() === "courtyard") {
@@ -279,19 +287,6 @@ function Fork() {
     }
     waitForInput(processInput);
 }
-    print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
-            stayHere();
-            waitThenCall(locationB);
-        }
-    }
-    waitForInput(processInput);
-
 function Plate() {
     clear();
     GameOverAscii();
@@ -313,10 +308,11 @@ function MainHall() {
     clear();
     print("\nYou are in the main hall.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tcellblock a" +
-        "\n\tcellblock b" +
-        "\n\tupstairs" +
-        "\n\tvisitor center");
+        "\n" +
+        "\n\t> cellblock a" +
+        "\n\t> cellblock b" +
+        "\n\t> upstairs" +
+        "\n\t> visitor center");
     
     function processInput(input){
         if (input.toLowerCase() === "locationa") {
@@ -339,7 +335,8 @@ function PlayBasketball() {
     Score();
     print("\nIt's time for work!")
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\twork");
+        "\n" +
+        "\n\t> work");
     
     function processInput(input){
         if (input.toLowerCase() === "work") {
@@ -355,11 +352,11 @@ function Workout() {
     clear();
     print("\nYou worked out in the gym.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\t> work");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "work") {
+            WorkTime();
         } else {
             stayHere();
             waitThenCall(locationB);
@@ -372,9 +369,10 @@ function VisitorCenter() {
     clear();
     print("\nYou are in the visitor center.");
     print("\nWho would you like to call? Say one of these choices:" +
-        "\n\tMom" +
-        "\n\tDad" +
-        "\n\tColin");
+        "\n" +
+        "\n\t> Mom" +
+        "\n\t> Dad" +
+        "\n\t> Colin");
     
     function processInput(input){
         if (input.toLowerCase() === "mom") {
@@ -399,7 +397,7 @@ clear();
     print("\nYou talked to Colin.");
     print("\nYou guys planned a helicopter escape tomorrow at midnight in the courtyard.")
     print("\nAnyway, it's time for work" +
-        "\n\t >work");
+        "\n\t> work");
     
     function processInput(input){
         if (input.toLowerCase() === "work") {
@@ -416,7 +414,8 @@ function WorkTime() {
     print("\nYou are in the work hall.");
     print("\nYou finished the work assigned to you.")
     print("\nWhere would you like to go next? Say one of these choices:" +
-        "\n\tcell");
+        "\n" +
+        "\n\t> cell");
     
     function processInput(input){
         if (input.toLowerCase() === "cell") {
@@ -432,7 +431,8 @@ function CellBlockB() {
     clear();
     print("\nYou are in Cell Block B. There is nothing to do here.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n" +
+        "\n\t> locationA");
     
     function processInput(input){
         if (input.toLowerCase() === "locationa") {
@@ -448,10 +448,11 @@ function Upstairs() {
     clear();
     print("\nYou went upstairs.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\tgo to cellblock c");
+        "\n" +
+        "\n\t> go to cellblock c");
     
     function processInput(input){
-        if (input.toLowerCase() === "cellblock c") {
+        if (input.toLowerCase() === "go to cellblock c") {
             CellBlockC();
         } else {
             stayHere();
@@ -464,7 +465,8 @@ function CellBlockC() {
     clear();
     print("\nYou are in Cell Block C.");
     print("\nWhat would you like to do next? Say one of these choices:" +
-        "\n\ttalk to Darren");
+        "\n" +
+        "\n\t> talk to Darren");
     
     function processInput(input){
         if (input.toLowerCase() === "talk to darren") {
@@ -481,7 +483,8 @@ function Darren() {
     print("\nYou are talking to Darren.");
     print("\nDarren said blah.");
     print("\nWhat would you like to say next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n" +
+        "\n\t> locationA");
     
     function processInput(input){
         if (input.toLowerCase() === "locationa") {
@@ -497,8 +500,9 @@ function DigHole() {
     clear();
     print("\nYou dug a hole to the courtyard; you can now go there.")
     print("\nWhere would you like to go?" +
-        "\n\twait" +
-        "\n\tcourtyard");
+        "\n" +
+        "\n\t> wait" +
+        "\n\t> courtyard");
     
     function processInput(input){
         if (input.toLowerCase() === "wait") {
@@ -519,6 +523,7 @@ function Escape() {
     YouWinAscii();
     print("\nYou and Colin were able to make a flawless escape.")
     print("\n<b>Again?</b>")
+    print("\nTo play again type restart or press the restart button in the top right corner.");
     
     function processInput(input){
         if (input.toLowerCase() === "restart") {
