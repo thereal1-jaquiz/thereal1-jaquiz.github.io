@@ -9,14 +9,15 @@ There will be multiple endings... eventually.
 
 ```mermaid
 graph TD;
-    Cell Block A<-->Main Hall;
+    cell(((Cell BLock A)))<-->Main Hall;
     Main Hall<-->Cell Block B;
-    Cafeteria<-->Courtyard;
-    Cafeteria----Main Hall;
-    Commons<-->Outside;
-    Outside<-->Portable;
-    Portable<-->rm511;
-    Portable<-->Bathroom;
+    Main Hall----Cafeteria;
+    Main Hall<-->Courtyard;
+    Main Hall<-->Visitor Center;
+    Cell Block A----Courtyard;
+    Work Hall----Upstaris;
+    Cell Block C<-->Upstairs;
+    Main Hall<-->Upstairs;
 ```
 
 The player starts on the bus, and then is directed into the Commons. T
