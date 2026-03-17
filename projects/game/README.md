@@ -17,13 +17,12 @@ graph TD;
     Outside<-->Portable;
     Portable<-->rm511;
     Portable<-->Bathroom;
-    graph LR
     A[Start] --> B(Round Box)
     subgraph Container [Container]
         B --> C((Inside))
     end
     C --> D[End]
-    
+
 ```
 
 The player starts on the bus, and then is directed into the Commons. T
