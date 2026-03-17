@@ -90,7 +90,7 @@ function Wait6pm() {
 }
 
 function Wait12am() {
-    if (hasSpoon = false) {
+    if (hasSpoon === false) {
         clear();
     print("\nYou waited...");
     print("\nThe time is now 12:00am.");
@@ -393,7 +393,7 @@ function VisitorCenter() {
 
 function Colin() {
 
-talkedToColin = true;
+talkedToColin === true;
 
 clear();
     print("\nYou talked to Colin.");
@@ -495,7 +495,6 @@ function Darren() {
 }
 function DigHole() {
     clear();
-    print("\nMovie ball knowledge?.");
     print("\nYou dug a hole to the courtyard; you can now go there.")
     print("\nWhere would you like to go?" +
         "\n\twait" +
@@ -504,9 +503,9 @@ function DigHole() {
     function processInput(input){
         if (input.toLowerCase() === "wait") {
             Wait6am();
-        } else if((talkedToColin = true) && (input.toLowerCase() === "courtyard")){
+        } else if((talkedToColin === true) && (input.toLowerCase() === "courtyard")){
             Escape();
-        } else if((talkedToColin = true) && (input.toLowerCase() === "courtyard")){
+        } else if((talkedToColin === false) && (input.toLowerCase() === "courtyard")){
             Courtyard12am();
         } else {
             stayHere();
@@ -551,7 +550,9 @@ function Courtyard12am() {
 //to locationA
 function start() {
     clear();
-    print("Welcome to my game! Type <i><b>'start'</b></i> to begin.");
+    print("You wake up in a prison cell. You have no recollection of how you ended up there.");
+    print("Your goal is to escape without being sent to solitary.");
+    print("Are you ready to start? If so, please type '<i><b>start</b></i>'");
 
     function processInput(input){
         if (input.toLowerCase() === "start") {
