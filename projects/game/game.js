@@ -393,7 +393,7 @@ function VisitorCenter() {
 
 function Colin() {
 
-talkedToColin === true;
+talkedToColin = true;
 
 clear();
     print("\nYou talked to Colin.");
