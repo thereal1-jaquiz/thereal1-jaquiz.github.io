@@ -1,6 +1,3 @@
-The current ending goes as follows:
-wait -> go to lunch -> smuggle -> spoon -> courtyard -> main hall -> visitor center -> colin -> work -> cell -> wait (x3 / until 12am) -> dig -> courtyard.
-
 # Chris Needs Coffee
 
 ## Setting & About
@@ -12,7 +9,7 @@ There will be multiple endings... eventually.
 
 ```mermaid
 graph TD;
-    bus(((Bus)))<-->Commons;
+    bus(((Cell)))<-->Commons;
     Library<-->Commons;
     Box<-->Cafeteria;
     Cafeteria<-->Commons;
@@ -20,6 +17,13 @@ graph TD;
     Outside<-->Portable;
     Portable<-->rm511;
     Portable<-->Bathroom;
+    graph LR
+    A[Start] --> B(Round Box)
+    subgraph Container [Container]
+        B --> C((Inside))
+    end
+    C --> D[End]
+    
 ```
 
 The player starts on the bus, and then is directed into the Commons. T
@@ -27,14 +31,8 @@ They can explore, but must eventually make their way to rm511.
 
 ## Story
 
-When the user gets to rm511, they learn that the teacher is asleep.
-They must take the teacher's coffee mug to the library, get it 
-filled, and then bring it back to the teacher.
-
-The game starts 15 minutes before the morning class bell, and each
-move costs 1 minute. So this journey must be completed in 15 moves.
-Some moves (like reading a book in the library) cost extra time.
-
+After the player wakes up in prison, they decide that they must escape, but to to this they cannot be caught.
+Walking aroud the prison they must take things, play games, and talk to other inmates in order to see freedom once again.
 ## Global Variables
 
 The most important variables that I have currently are
