@@ -9,10 +9,10 @@ There will be multiple endings... eventually.
 
 ```mermaid
 graph TD;
-    bus(((Cell)))<-->Commons;
-    Library<-->Commons;
-    Box<-->Cafeteria;
+    Cell Block A<-->Main Hall;
+    Main Hall<-->Cell Block B;
     Cafeteria<-->Commons;
+    Cafeteria----Main Hall;
     Commons<-->Outside;
     Outside<-->Portable;
     Portable<-->rm511;
@@ -22,7 +22,7 @@ graph TD;
         B --> C((Inside))
     end
     C --> D[End]
-
+    Main Hall Level 2
 ```
 
 The player starts on the bus, and then is directed into the Commons. T
