@@ -1,4 +1,4 @@
-# Chris Needs Coffee
+# PRISONBREAK
 
 ## Setting & About
 
@@ -7,22 +7,7 @@ The game is about you, the player, attempting to escape prison without being to 
 There will be multiple endings... eventually.
 ## Map
 
-```mermaid
-graph TD;
-    cell(((Cell BLock A)))<-->Main Hall;
-    Main Hall<-->Cell Block B;
-    Main Hall----Cafeteria;
-    Main Hall<-->Courtyard;
-    Main Hall<-->Visitor Center;
-    Cell Block A----Courtyard;
-    Work Hall----Upstaris;
-    Cell Block C<-->Upstairs;
-    Main Hall<-->Upstairs;
-```
-
-The player starts on the bus, and then is directed into the Commons. T
-They can explore, but must eventually make their way to rm511.
-
+![](map-diagram.png)
 ## Story
 
 After the player wakes up in prison, they decide that they must escape, but to to this they cannot be caught.
