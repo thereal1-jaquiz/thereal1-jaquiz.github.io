@@ -549,6 +549,8 @@ function Courtyard12am() {
 //very start. For this simple example, any input will bring you
 //to locationA
 function start() {
+    hasSpoon = false;
+    talkedToColin = false;
     clear();
     print("You wake up in a prison cell. You have no recollection of how you ended up there.");
     print("Your goal is to escape without being sent to solitary.");
