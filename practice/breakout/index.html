@@ -77,12 +77,20 @@ function draw() {
   x += dx;
   y += dy;
 
+  if (rightPressed) {
+  paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
+} else if (leftPressed) {
+  paddleX = Math.max(paddleX - 7, 0);
+}
+
 if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
   dx = -dx;
 }
 if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
   dy = -dy;
 }
+}
+
 function keyDownHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = true;
@@ -98,7 +106,7 @@ function keyUpHandler(e) {
     leftPressed = false;
   }
 }
-}       
+     
 document.addEventListener("keydown", keyDownHandler);
 document.addEventListener("keyup", keyUpHandler); 
 function keyDownHandler(e) {
